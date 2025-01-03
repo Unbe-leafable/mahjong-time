@@ -200,8 +200,10 @@ const Main = () => {
       <ScoreTable
         handleOpenScoreModal={handleOpenScoreModal}
         rounds={rounds}
+        setRounds={setRounds}
         namesList={namesList}
         scoreData={scoreData}
+        setScoreData={setScoreData}
       />
     </Box>
   );

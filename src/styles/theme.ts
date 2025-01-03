@@ -111,7 +111,7 @@ export const theme = createTheme({
           },
         },
         containedSecondary: {
-          background: '#736BCE1A',
+          background: colors.purple,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -129,7 +129,7 @@ export const theme = createTheme({
           },
         },
         containedWarning: {
-          background: `linear-gradient(${colors.red}, ${colors.red}) padding-box,
+          background: `linear-gradient(#A63F25, #A63F25) padding-box,
           linear-gradient(to bottom, #CB5434, #BC4227) border-box`,
           border: `1px solid transparent`,
           color: colors.lightRed,
@@ -157,9 +157,27 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTableRow: {
+      styleOverrides: {
+        root: {
+          '.icon-button': {
+            visibility: 'hidden',
+          },
+          '&:hover, &:active, &:focus': {
+            backgroundColor: '#736BCE0F',
+            cursor: 'pointer',
+
+            '.icon-button': {
+              visibility: 'visible',
+            },
+          },
+        },
+      },
+    },
     MuiTableCell: {
       styleOverrides: {
         root: {
+          background: 'transparent',
           borderBottom: 'none',
           textAlign: 'center',
           height: '32px',
